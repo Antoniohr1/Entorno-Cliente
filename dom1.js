@@ -94,13 +94,13 @@ let hermano = document.querySelector("li:nth-of-type(3n");
 padre.insertBefore(nuevoElemento, hermano);*/
 
 
-let boton = document.getElementById("boton1");
+/*let boton = document.getElementById("boton1");
 let elemento = document.getElementById("textarea");
 
 boton.addEventListener("click", function(evento) {
     // alert("Has pulsado el elemento " + this.id + " y se ha disparado el evento: " + evento.type);
     alert("El contenido del textarea " + elemento.value);
-});
+});*/
 /*boton.onclick = () => {
 
         //Codigo
@@ -108,10 +108,18 @@ boton.addEventListener("click", function(evento) {
     }*/
 let checkbox = document.getElementById("cambio");
 checkbox.addEventListener("click", function(event) {
-    let elemento1 = document.getElementById("textarea");
+    let elemento1 = document.getElementById("texto");
     if (this.checked) {
         elemento1.type = "text";
     } else {
         elemento1.type = "password";
     }
+})
+let boton = document.getElementById("boton1");
+let elemento2 = document.getElementById("texto");
+let nuevoElemento = document.createElement("li");
+boton.addEventListener("click", function(event1) {
+    nuevoElemento.innerText = elemento2.value;
+    let padre = document.querySelector("ul");
+    padre.appendChild(nuevoElemento);
 })
