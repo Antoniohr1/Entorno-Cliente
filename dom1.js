@@ -72,7 +72,7 @@ elemento.forEach(item => { console.log(item.innerText) });
 let div = document.querySelector("div:nth-of-type(3n");
 [...div.children].forEach(item => { console.log(item.innerText) });*/
 
-let nuevoElemento = document.createElement("li");
+/*let nuevoElemento = document.createElement("li");
 nuevoElemento.innerText = "Nuevo li";
 //FORMA 1
 let padre = document.getElementsByTagName("ul");
@@ -91,4 +91,27 @@ padre = document.body.children[0];
 padre.appendChild(nuevoElemento);
 
 let hermano = document.querySelector("li:nth-of-type(3n");
-padre.insertBefore(nuevoElemento, hermano);
+padre.insertBefore(nuevoElemento, hermano);*/
+
+
+let boton = document.getElementById("boton1");
+let elemento = document.getElementById("textarea");
+
+boton.addEventListener("click", function(evento) {
+    // alert("Has pulsado el elemento " + this.id + " y se ha disparado el evento: " + evento.type);
+    alert("El contenido del textarea " + elemento.value);
+});
+/*boton.onclick = () => {
+
+        //Codigo
+        alert("El contenido del textarea " + elemento.value);
+    }*/
+let checkbox = document.getElementById("cambio");
+checkbox.addEventListener("click", function(event) {
+    let elemento1 = document.getElementById("textarea");
+    if (this.checked) {
+        elemento1.type = "text";
+    } else {
+        elemento1.type = "password";
+    }
+})
